@@ -1,0 +1,17 @@
+.book{
+    margin: 20px 50px;
+}
+.book input{
+    display: block;
+    margin-top: 10px;
+    padding: 2px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 300px;
+}
+.error{
+    color: red;
+}
+.book label{
+    color: #29323c;
+}

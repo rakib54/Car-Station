@@ -1,0 +1,57 @@
+import React from 'react';
+import BookingSystemDetails from '../BookingSystemDetails/BookingSystemDetails';
+import verified from '../../../images/logo/verified.png'
+import mechanical from '../../../images/logo/mechanical.png'
+import carwash from '../../../images/logo/car-wash.png'
+import check from '../../../images/logo/check.png'
+import './BookingSystem.css'
+
+
+const ServiceDetails = [
+    {
+        id: 1,
+        img: verified,
+        name: "1.BOOKING"
+    },
+    {
+        id: 2,
+        img: mechanical,
+        name: "2.INSPECTION"
+    },
+    {
+        id: 3,
+        img: carwash,
+        name: "3.WASHING"
+    },
+    {
+        id: 4,
+        img: check,
+        name: "4.DELIVERY"
+    }
+]
+
+const BookingSystem = () => {
+
+    return (
+        <main className="container font-link">
+            <div className="d-flex justify-content-center p-5">
+                <h2 className="me-5 text-color"><b>No 1. Car Wash Booking System</b></h2>
+                <button className="btn-color">Book Appointment</button>
+            </div>
+            <div style={{height:'500px'}} className=" mt-5">
+                <div className="book text-center">
+                    <h3 className="text-center text-color"><b>OUR PROCESS</b></h3>
+                    <h3 className="text-center text-secondary">________</h3>
+                    <p className="text-center">We know your time is valuable</p>
+                </div>
+                <div className=" d-flex justify-content-evenly mt-5 book">
+                    {
+                        ServiceDetails.map(service => <BookingSystemDetails key={service.id} service={service}></BookingSystemDetails>)
+                    }
+                </div>
+            </div>
+        </main>
+    );
+};
+
+export default BookingSystem;
