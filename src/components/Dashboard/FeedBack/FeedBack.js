@@ -29,7 +29,7 @@ const FeedBack = () => {
     };
 
     return (
-        <div className="container-fluid row">
+        <div className="container-fluid row font-link">
             <div className="col-md-2">
                 <Sidebar></Sidebar>
             </div>

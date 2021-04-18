@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Service = ({service}) => {
+    // const[selectedService , setSelectedService] = useState([])
+
+    // useEffect(()=>{
+    //     fetch(`http://localhost:4000/selectService/${id}`,{
+    //         method:'POST',
+    //         headers:{
+    //             'content-type':'application/json'
+    //         },
+    //         body:JSON.stringify()
+    //     })
+    //     .then(res =>res.json())
+    //     .then(data =>{
+    //         setSelectedService(data)
+    //     })
+    // })
     return (
         <div className="col-md-4 col-sm-6 text-center mt-5">
             <img style={{height:'150px'}} className="img-fluid" src={service.imageUrl} alt=""/>
             <h4>{service.name}</h4>
             <p className="text-secondary" style={{height:'70px'}}>{service.description}</p>
-            <button className="btn-color mb-1">Booking</button>
+            <Link to="/service"><button className="btn-color mb-1">Book now</button></Link>
         </div>
     );
 };

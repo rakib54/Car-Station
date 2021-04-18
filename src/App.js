@@ -16,6 +16,7 @@ import FeedBack from './components/Dashboard/FeedBack/FeedBack';
 import Admin from './components/Dashboard/Admin/Admin';
 import OrderList from './components/Dashboard/OrderList/OrderList';
 import ManageService from './components/Dashboard/ManageService/ManageService';
+import MyService from './components/Dashboard/MyService/MyService';
 
 export const UserContext = createContext()
 
@@ -52,6 +53,9 @@ function App() {
           <Route path="/manage"> 
             <ManageService></ManageService>
           </Route>
+          <PrivateRoute path="/service">
+            <MyService></MyService>
+          </PrivateRoute>
           <Route path="/">
             <Home />
           </Route>
