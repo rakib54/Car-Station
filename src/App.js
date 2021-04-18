@@ -13,6 +13,9 @@ import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import AddService from './components/Dashboard/AddService/AddService';
 import Book from './components/Dashboard/Book/Book';
 import FeedBack from './components/Dashboard/FeedBack/FeedBack';
+import Admin from './components/Dashboard/Admin/Admin';
+import OrderList from './components/Dashboard/OrderList/OrderList';
+import ManageService from './components/Dashboard/ManageService/ManageService';
 
 export const UserContext = createContext()
 
@@ -20,31 +23,40 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-    <Router>
-      <Switch>
-        <Route path="/home">
-          <Home></Home>
-        </Route>
-        <Route path='/login'>
-          <Login></Login>
-        </Route>
-        <PrivateRoute path="/dashboard">
+      <Router>
+        <Switch>
+          <Route path="/home">
+            <Home></Home>
+          </Route>
+          <Route path='/login'>
+            <Login></Login>
+          </Route>
+          <PrivateRoute path="/dashboard">
             <Dashboard></Dashboard>
-        </PrivateRoute>
-        <Route path="/addService">
-          <AddService></AddService>
-        </Route>
-        <Route path="/book">
-          <Book></Book>
-        </Route>
-        <Route path="/feedback">
+          </PrivateRoute>
+          <Route path="/addService">
+            <AddService></AddService>
+          </Route>
+          <Route path="/book">
+            <Book></Book>
+          </Route>
+          <Route path="/feedback">
             <FeedBack></FeedBack>
-        </Route>
-        <Route path="/">
-          <Home/>
-        </Route>
-      </Switch>
-    </Router>
+          </Route>
+          <Route path="/admin">
+            <Admin></Admin>
+          </Route>
+          <Route path="/orderList">
+            <OrderList></OrderList>
+          </Route>
+          <Route path="/manage"> 
+            <ManageService></ManageService>
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
     </UserContext.Provider>
   );
 }

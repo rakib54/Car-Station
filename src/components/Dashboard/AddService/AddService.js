@@ -42,14 +42,14 @@ const AddService = () => {
     }
 
     return (
-        <div className="container-fluid row">
+        <div className="container-fluid row font-link">
             <div className="col-md-2">
                 <Sidebar></Sidebar>
             </div>
             <div className="col-md-10 p-5">
                 <h5><b>Add Service</b></h5>
                 <div>
-                    <form className="addService" onSubmit={handleSubmit(onSubmit)}>
+                    <form className="addService text-color" onSubmit={handleSubmit(onSubmit)}>
                         <label htmlFor="">service name</label>
                         <input defaultValue="" {...register("name")} />
                         <label htmlFor="">description</label>
