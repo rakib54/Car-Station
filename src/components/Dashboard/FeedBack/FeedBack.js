@@ -15,7 +15,7 @@ const FeedBack = () => {
             comments: data.description,
             date:new Date()
         }
-        fetch(`http://localhost:4000/testimonial`,{
+        fetch(`https://hidden-stream-16931.herokuapp.com/testimonial`,{
             method:'POST',
             headers:{
                 'content-type':'application/json'

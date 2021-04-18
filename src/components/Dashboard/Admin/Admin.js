@@ -11,7 +11,7 @@ const Admin = () => {
             AdminEmail: data.email
         }
 
-        fetch('http://localhost:4000/addAdmin',{
+        fetch('https://hidden-stream-16931.herokuapp.com/addAdmin',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

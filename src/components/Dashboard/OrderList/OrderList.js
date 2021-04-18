@@ -8,7 +8,7 @@ const OrderList = () => {
         height: "100%"
     }
     useEffect(() => {
-        fetch('http://localhost:4000/bookDetails')
+        fetch('https://hidden-stream-16931.herokuapp.com/bookDetails')
             .then(res => res.json())
             .then(data => {
                 setBookingData(data)

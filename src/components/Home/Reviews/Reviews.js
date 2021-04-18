@@ -5,7 +5,7 @@ import './Reviews.css'
 const Reviews = () => {
     const [testimonials, setTestimonial] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:4000/allTestimonial')
+        fetch('https://hidden-stream-16931.herokuapp.com/allTestimonial')
         .then(res => res.json())
         .then(result =>{
             setTestimonial(result)

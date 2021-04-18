@@ -5,7 +5,7 @@ const Service = ({service}) => {
     // const[selectedService , setSelectedService] = useState([])
 
     // useEffect(()=>{
-    //     fetch(`http://localhost:4000/selectService/${id}`,{
+    //     fetch(`https://hidden-stream-16931.herokuapp.com/selectService/${id}`,{
     //         method:'POST',
     //         headers:{
     //             'content-type':'application/json'

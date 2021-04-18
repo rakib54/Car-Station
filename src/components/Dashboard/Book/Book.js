@@ -21,7 +21,7 @@ const Book = () => {
             paymentId,
             bookingData
         }
-        fetch('http://localhost:4000/bookings',{
+        fetch('https://hidden-stream-16931.herokuapp.com/bookings',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

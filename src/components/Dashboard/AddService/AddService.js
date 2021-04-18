@@ -14,7 +14,7 @@ const AddService = () => {
             imageUrl: imageUrl
         }
 
-        fetch(`http://localhost:4000/addService`, {
+        fetch(`https://hidden-stream-16931.herokuapp.com/addService`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
