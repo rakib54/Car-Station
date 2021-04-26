@@ -22,6 +22,7 @@ const Service = ({service}) => {
             <img style={{height:'150px'}} className="img-fluid" src={service.imageUrl} alt=""/>
             <h4>{service.name}</h4>
             <p className="text-secondary" style={{height:'70px'}}>{service.description}</p>
+            <h4>$500</h4>
             <Link to="/service"><button className="btn-color mb-1">Book now</button></Link>
         </div>
     );

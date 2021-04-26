@@ -4,14 +4,13 @@ import './BookSystemDetails.css'
 
 const BookingSystemDetails = ({ service }) => {
     return (
-        <main className="row">
-            <div className="col-md-3 col-sm-12">
+        
+            <div className="col-md-3 col-sm-12 text-center mt-5">
                 <img style={{ height: '100px' }} src={service.img} alt="" />
-                <br />
-                <br />
-                <h5>{service.name}</h5>
+                
+                <h5 className="mt-4">{service.name}</h5>
             </div>
-        </main>
+       
     );
 };
 

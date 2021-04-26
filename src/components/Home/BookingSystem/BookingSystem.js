@@ -33,18 +33,18 @@ const ServiceDetails = [
 
 const BookingSystem = () => {
     return (
-        <main className="container font-link">
+        <main className=" font-link">
             <div className="d-flex justify-content-center p-5">
                 <h2 className="me-5 text-color"><b>No 1. Car Wash Booking System</b></h2>
-                <button className="btn-color">Book Appointment</button>
+                <button style={{height:'50px'}} className="btn-color">Book Appointment</button>
             </div>
-            <div style={{ height: '500px' }} className=" mt-5">
+            <div style={{marginBottom:'150px'}} className="container">
                 <div className="book text-center">
                     <h3 className="text-center text-color"><b>OUR PROCESS</b></h3>
                     <h3 className="text-center text-secondary">________</h3>
                     <p className="text-center">We know your time is valuable</p>
                 </div>
-                <div className=" d-flex justify-content-evenly mt-5 book">
+                <div className="row">
                     {
                         ServiceDetails.map(service => <BookingSystemDetails key={service.id} service={service}></BookingSystemDetails>)
                     }
