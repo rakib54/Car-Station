@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../../Shared/Footer/Footer';
 import Navbar from '../../Shared/Navbar/Navbar';
+import Animation from '../Animation/Animation';
 import BookingSystem from '../BookingSystem/BookingSystem';
 import HeaderMain from '../HeaderMain/HeaderMain';
 import Reviews from '../Reviews/Reviews';

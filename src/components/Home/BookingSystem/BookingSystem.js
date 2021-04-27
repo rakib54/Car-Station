@@ -5,6 +5,7 @@ import mechanical from '../../../images/logo/mechanical.png'
 import carwash from '../../../images/logo/car-wash.png'
 import check from '../../../images/logo/check.png'
 import './BookingSystem.css'
+import Animation from '../Animation/Animation';
 
 
 
@@ -35,7 +36,7 @@ const BookingSystem = () => {
     return (
         <main className=" font-link">
             <div className="d-flex justify-content-center p-5">
-                <h2 className="me-5 text-color"><b>No 1. Car Wash Booking System</b></h2>
+                <Animation></Animation>
                 <button style={{height:'50px'}} className="btn-color">Book Appointment</button>
             </div>
             <div style={{marginBottom:'150px'}} className="container">
