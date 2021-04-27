@@ -41,6 +41,9 @@ function App() {
           <Route path="/book">
             <Book></Book>
           </Route>
+          {/* <PrivateRoute path="/book/:name">
+              <MyService></MyService>
+          </PrivateRoute> */}
           <Route path="/feedback">
             <FeedBack></FeedBack>
           </Route>
@@ -53,7 +56,7 @@ function App() {
           <Route path="/manage"> 
             <ManageService></ManageService>
           </Route>
-          <PrivateRoute path="/service">
+          <PrivateRoute path="/service/:name">
             <MyService></MyService>
           </PrivateRoute>
           <Route path="/">

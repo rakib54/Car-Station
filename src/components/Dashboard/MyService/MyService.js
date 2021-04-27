@@ -1,18 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Sidebar from '../Sidebar/Sidebar';
 
 const MyService = () => {
     
-    const [services, setServices] = useState([])
+    const {name} = useParams()
 
-    useEffect(() => {
-        fetch('https://hidden-stream-16931.herokuapp.com/allService')
-            .then(res => res.json())
-            .then(data => {
-                setServices(data[1])
-            })
-    }, [])
     return (
         <div className="container-fluid row text-color font-link">
             <div className="col-md-2">
@@ -30,7 +23,7 @@ const MyService = () => {
                     <tbody>
                         <tr >
 
-                            <td className="text-color">{services.name}</td>
+                            <td className="text-color">{name}</td>
                             <td>$ 500</td>
                             <td><button className="btn-sm btn-danger">Pending</button></td>
                         </tr>
