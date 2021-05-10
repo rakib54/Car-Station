@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faSignOutAlt, faCalendar, faGripHorizontal, faUsers, faTaxi, faCommentDots, faList, faPlus } from '@fortawesome/free-solid-svg-icons';
 import './Sidebar.css'
@@ -23,6 +23,7 @@ const Sidebar = () => {
                 console.log(data);
             })
     }, [])
+    let {name} = useParams()
 
     return (
         <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4 font-link" style={{ height: '100vh' }}>
@@ -41,7 +42,7 @@ const Sidebar = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/service" className="text-white" >
+                                <Link to={`/service/${name}`} className="text-white" >
                                     <FontAwesomeIcon icon={faTaxi} /><span>Your Service</span>
                                 </Link>
                             </li>
