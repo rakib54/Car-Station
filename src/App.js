@@ -17,6 +17,9 @@ import Admin from './components/Dashboard/Admin/Admin';
 import OrderList from './components/Dashboard/OrderList/OrderList';
 import ManageService from './components/Dashboard/ManageService/ManageService';
 import MyService from './components/Dashboard/MyService/MyService';
+import About from './components/About/About/About';
+import Blog from './components/Blog/Blog/Blog';
+import Contact from './components/Contact/Contact';
 
 export const UserContext = createContext()
 
@@ -49,6 +52,15 @@ function App() {
           </Route>
           <Route path="/admin">
             <Admin></Admin>
+          </Route>
+          <Route path="/about">
+            <About></About>
+          </Route>
+          <Route path="/blog">
+            <Blog></Blog>
+          </Route>
+          <Route path="/contact">
+            <Contact></Contact>
           </Route>
           <Route path="/orderList">
             <OrderList></OrderList>
